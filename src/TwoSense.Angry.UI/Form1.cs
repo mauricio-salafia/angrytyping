@@ -17,5 +17,9 @@ namespace TwoSense.Angry.UI
             InitializeComponent();
         }
 
+        private void FrmSendEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

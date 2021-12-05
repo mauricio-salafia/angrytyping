@@ -102,6 +102,7 @@ namespace TwoSense.Angry.UI
             this.Controls.Add(this.tbTo);
             this.Name = "FrmSendEmail";
             this.Text = "Send Email";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmSendEmail_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
