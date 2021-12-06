@@ -29,12 +29,14 @@ namespace TwoSense.Angry.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbTo = new System.Windows.Forms.TextBox();
             this.tbSubject = new System.Windows.Forms.TextBox();
             this.tbBody = new System.Windows.Forms.TextBox();
             this.btSend = new System.Windows.Forms.Button();
             this.lbTo = new System.Windows.Forms.Label();
             this.lbSubject = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // tbTo
@@ -70,6 +72,7 @@ namespace TwoSense.Angry.UI
             this.btSend.TabIndex = 5;
             this.btSend.Text = "Send";
             this.btSend.UseVisualStyleBackColor = true;
+            this.btSend.Click += new System.EventHandler(this.btSend_Click);
             // 
             // lbTo
             // 
@@ -89,6 +92,11 @@ namespace TwoSense.Angry.UI
             this.lbSubject.TabIndex = 2;
             this.lbSubject.Text = "Subject:";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 6000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmSendEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
@@ -102,7 +110,7 @@ namespace TwoSense.Angry.UI
             this.Controls.Add(this.tbTo);
             this.Name = "FrmSendEmail";
             this.Text = "Send Email";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmSendEmail_KeyDown);
+            this.Shown += new System.EventHandler(this.FrmSendEmail_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +124,7 @@ namespace TwoSense.Angry.UI
         private System.Windows.Forms.Button btSend;
         private System.Windows.Forms.Label lbTo;
         private System.Windows.Forms.Label lbSubject;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

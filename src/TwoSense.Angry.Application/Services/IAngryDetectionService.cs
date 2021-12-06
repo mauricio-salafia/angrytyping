@@ -6,6 +6,6 @@ namespace TwoSense.Angry.Application.Services
 {
     public interface IAngryDetectionService
     {
-        Task<bool> IsAngryAsync(IEnumerable<KeyValuePair<long, long>> periods, CancellationToken cancellationToken = default(CancellationToken));
+        Task<bool> IsAngryAsync(IEnumerable<int> periods, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

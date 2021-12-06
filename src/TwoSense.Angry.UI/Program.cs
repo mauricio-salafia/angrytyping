@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection;
 using TwoSense.Angry.Application.Services;
@@ -33,6 +30,7 @@ namespace TwoSense.Angry.UI
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddScoped<IAngryDetectionService, AngryDetectionService>();
+            services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<FrmSendEmail>();
         }
     }
